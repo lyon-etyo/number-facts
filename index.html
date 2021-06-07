@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Numbers Facts</title>
+    <script src="index.js" defer></script>
+    <style>
+      .card,
+      #fact {
+        display: none;
+      }
+
+      div.card {
+        transition: background-color 300ms ease-in-out;
+      }
+    </style>
+  </head>
+
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card text-light mt-5 p-4 rounded shadow">
+            <h1>Number Facts</h1>
+            <p><small>Enter a number and see the Fact.</small></p>
+            <input
+              type="number"
+              name="input_number"
+              id="input-number"
+              class="form-control form-control-lg"
+              min="0"
+              max="100"
+              placeholder="Enter any positive number..."
+              required
+            />
+            <div id="fact" class="card-body text-justify">
+              <h4 class="card-title">
+                Fact About
+                <span id="number" class="badge badge-secondary"></span>
+              </h4>
+              <p id="fact-text" class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
