@@ -1,6 +1,6 @@
 const input = document.getElementById("input-number");
 const fact = input.nextElementSibling;
-const url = "http://www.numbersapi.com/";
+const url = "http://numbersapi.com/";
 let number;
 
 // Event to fetch data when user press Enter
