@@ -1,6 +1,6 @@
 const input = document.getElementById("input-number");
 const fact = input.nextElementSibling;
-const url = "http://numbersapi.com/";
+const url = "http://www.numbersapi.com/";
 let number;
 
 // Event to fetch data when user press Enter
@@ -23,8 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Function to fetch data from Numbers API
-function fetchData(url, spanContent) {
-  fetch(url)
+function fetchData(url) {
+  fetch(url, {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+  })
     .then(response => response.text())
     .then(data => {
       // show card element
